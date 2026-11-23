@@ -7,5 +7,5 @@ https://abp.oisd.nl/basic/
 https://phishing.army/download/phishing_army_blocklist_extended.txt
 # Dandelion Sprout anti-malware (AdGuard Home format)
 https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt
-# URLhaus online malware hosts
-https://urlhaus.abuse.ch/downloads/hostfile/
+# Scam blocklist by DurableNapkin (AdGuard format)
+https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
