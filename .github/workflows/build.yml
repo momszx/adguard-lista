@@ -19,6 +19,7 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: "1.22"
+          cache: false
       - run: go vet ./...
       - run: go test ./...
       - run: go run . -sources sources.txt -out blocklist.txt
