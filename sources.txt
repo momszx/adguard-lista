@@ -1,0 +1,13 @@
+# One public list URL per line. Add or remove lines, the build workflow rebuilds blocklist.txt.
+# AdGuard DNS filter
+https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+# OISD basic
+https://abp.oisd.nl/basic/
+# HuAddBlock (Hungarian)
+https://raw.githubusercontent.com/hufilter/hufilter/master/hufilter-dns.txt
+# Phishing Army extended
+https://phishing.army/download/phishing_army_blocklist_extended.txt
+# Dandelion Sprout anti-malware (AdGuard Home format)
+https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt
+# URLhaus online malware domains (AdGuard Home format)
+https://curben.gitlab.io/malware-filter/urlhaus-filter-agh-online.txt
