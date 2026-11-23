@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["main.go", "main_test.go", "sources.txt", ".github/workflows/build.yml"]
+    paths: ["main.go", "main_test.go", "sources.txt", "extra.txt", ".github/workflows/build.yml"]
 
 permissions:
   contents: write

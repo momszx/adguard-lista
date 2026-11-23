@@ -8,7 +8,7 @@ Use this URL as a DNS blocklist in AdGuard Home (Filters, DNS blocklists, Add a 
 
 ## How it works
 
-- `sources.txt` holds one source URL per line.
+- `sources.txt` holds one source URL per line. `extra.txt` holds own rules (same syntax).
 - `main.go` downloads them, keeps only plain domain rules (`||domain^`, hosts lines, bare domains),
   honours simple `@@||domain^` allow rules, drops subdomains already covered by a blocked parent
   domain, and writes `blocklist.txt`.

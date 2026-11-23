@@ -159,6 +159,7 @@ func readSources(path string) ([]string, error) {
 
 func main() {
 	srcPath := flag.String("sources", "sources.txt", "file with one source URL per line")
+	extraPath := flag.String("extra", "extra.txt", "optional file with own rules, same syntax as the sources")
 	outPath := flag.String("out", "blocklist.txt", "output list")
 	flag.Parse()
 
@@ -189,6 +190,20 @@ func main() {
 			}
 		}
 		fmt.Printf("%7d rules  %s\n", n, u)
+	}
+	if data, err := os.ReadFile(*extraPath); err == nil {
+		n := 0
+		for _, l := range strings.Split(string(data), "\n") {
+			if d, isAllow, ok := parseLine(l); ok {
+				n++
+				if isAllow {
+					allow[d] = true
+				} else {
+					block[d] = true
+				}
+			}
+		}
+		fmt.Printf("%7d rules  %s\n", n, *extraPath)
 	}
 	if failed {
 		fmt.Fprintln(os.Stderr, "at least one source failed, output not written")
